@@ -1,0 +1,40 @@
+
+
+<mat-toolbar >  
+    <mat-toolbar-row>
+        <span class="title-center">{{title}}</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      
+      <span class="title-center">
+        <button mat-button href="www.torquepower.com">Home</button>
+        <button mat-button routerLink="/retailportal">Retail</button>
+        <button mat-button routerLink="/clearance">Clearance</button>
+        <button mat-button routerLink="/trade">Trade Portal</button>
+
+        <button mat-button [matMenuTriggerFor]="menu">Quotes</button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item>Settings</button>
+              <button mat-menu-item routerLink="/quotes">Service</button>
+          </mat-menu>
+
+        <button mat-button routerLink="/fullparts">Complete Parts List</button>
+      </span>
+    
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-toolbar>
+      <span>Torque Power Diesel - Cummins Parts </span>
+    
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+
+      <button mat-button routerLink="/retailportal">Retail</button>
+
+    </mat-toolbar>
+    
+<router-outlet></router-outlet>
+<footer>bottom website stuff, facebook and the googles </footer>

@@ -1,0 +1,35 @@
+<mat-table  #table [dataSource]="dataSource" *ngIf="dataSource">
+
+  <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Code Column -->
+  <ng-container matColumnDef="code">
+    <mat-header-cell fxFlex="20%" *matHeaderCellDef>Part Code</mat-header-cell>
+    <mat-cell fxFlex="20%" *matCellDef="let part"> {{part.code}} </mat-cell>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="description">
+    <mat-header-cell *matHeaderCellDef>Product Description</mat-header-cell>
+    <mat-cell *matCellDef="let part"> {{part.description}} </mat-cell>
+  </ng-container>
+
+  <!-- Unit Column -->
+  <ng-container matColumnDef="unit">
+    <mat-header-cell fxFlex="10%" *matHeaderCellDef>Unit</mat-header-cell>
+    <mat-cell fxFlex="10%" *matCellDef="let part"> {{part.unit}} </mat-cell>
+  </ng-container>
+
+  <!-- Sell Column -->
+  <ng-container matColumnDef="sell">
+    <mat-header-cell fxFlex="10%" *matHeaderCellDef align="right">Price</mat-header-cell>
+    <mat-cell fxFlex="10%" *matCellDef="let part" align="right"> ${{((part.price.value)/100).toFixed(2)}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<div class="loading-indicator" *ngIf="showDimmer">
+  <mat-spinner mode="indeterminate" color="primary"></mat-spinner>
+</div>

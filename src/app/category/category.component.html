@@ -1,0 +1,9 @@
+<h3>Categories</h3>
+<mat-nav-list>
+  <mat-list-item *ngFor="let cat of category" (click)="clicked(cat.code)">
+    {{cat.description}}
+  </mat-list-item>
+</mat-nav-list>
+<div class="loading-indicator" *ngIf="showDimmer">
+  <mat-spinner mode="indeterminate" color="primary"></mat-spinner>
+</div>

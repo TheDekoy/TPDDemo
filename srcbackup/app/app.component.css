@@ -1,0 +1,57 @@
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+body {
+    background-color: green;
+    color: purple;
+    font-size: 1.1em;
+}
+h1 {
+    color: coral;
+    text-align: center;
+}
+#intro {
+    font-size: 1.3em;
+}
+.colorful {
+    color: orange;
+}
+div {
+    text-align: center;
+}
+nav {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+button, menu, menuitem {
+    color: black;
+    font-weight: bold;
+    font-size: 110%;
+    text-align: left;
+}
+
+a:link, a:visited {
+    color: #000;
+    font-weight: bold;
+}
+
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .title-center {
+    
+        margin: 0 auto;
+      
+  }
