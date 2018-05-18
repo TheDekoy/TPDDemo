@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StateService {
+  
 
   private _category: string;
   private _group: string;
