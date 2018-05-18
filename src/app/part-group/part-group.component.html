@@ -1,0 +1,9 @@
+<h3>Part Group</h3>
+<mat-nav-list>
+  <mat-list-item *ngFor="let grp of group" (click)="clicked(grp.code)">
+    {{grp.description}}
+  </mat-list-item>
+</mat-nav-list>
+<div class="loading-indicator" *ngIf="showDimmer">
+  <mat-spinner mode="indeterminate" color="primary"></mat-spinner>
+</div>

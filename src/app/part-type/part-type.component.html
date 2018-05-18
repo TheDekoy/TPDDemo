@@ -1,0 +1,9 @@
+<h3>Part Type</h3>
+<mat-nav-list>
+  <mat-list-item *ngFor="let type of parttype" (click)="clicked(type.code)">
+    {{type.description}}
+  </mat-list-item>
+</mat-nav-list>
+<div class="loading-indicator" *ngIf="showDimmer">
+  <mat-spinner mode="indeterminate" color="primary"></mat-spinner>
+</div>
